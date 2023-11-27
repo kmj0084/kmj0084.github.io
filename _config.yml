@@ -21,7 +21,8 @@
 title: Keegan Johnson test
 email: keeganjohnson89@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-"text text text"
+  words words words
+  words
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kmj0084.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: kmj0084
