@@ -23,7 +23,7 @@ layout: archive
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "My Favorite Articles" }}</h3>
 <div class="entries-{{ entries_layout }}">
   {% for post in posts %}
-    {% if post.highlight_home and post.categories contains "article" %}
+    {% if post.categories contains "article" %}
     {% include archive-single.html type=entries_layout %}
     {% endif %}
   {% endfor %}

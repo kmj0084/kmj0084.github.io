@@ -8,4 +8,4 @@ author_profile: true
 ---
 ![keegan johnson](/assets/images/chart.jpg){: .avatar}
 # Hi there! I'm Keegan Johnson
-I'm a self-taught programmer, instructor, product manager, game developer, and writer. Check out some of my favorite article and projects below or go to [My Work](/mywork) of [My Writing](/mywriting) to see a categorized list.
+I'm a HR Data Scientist and baseball enthusiast. Check out some of my projects below or go to [My Work](/mywork) of [My Writing](/mywriting).
