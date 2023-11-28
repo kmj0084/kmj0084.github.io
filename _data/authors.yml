@@ -1,0 +1,11 @@
+Keegan Johnson:
+  name        : "Keegan Johnson"
+  bio         : "Let's talk about analytics! Reach out via the links below."
+  avatar      : "/assets/images/lnhs.jpg"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:name@email.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.linkedin.com/in/kmj0084/"

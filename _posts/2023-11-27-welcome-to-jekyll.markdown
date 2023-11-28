@@ -1,8 +1,13 @@
 ---
-layout: post
+layout: posts
 title:  "Welcome to Jekyll!"
 date:   2023-11-27 12:38:15 +0000
-categories: jekyll update
+categories: work
+tags: education
+description: this is an article about education
+header:
+ overlay_image: https://images.unsplash.com/photo-1475440197469-e367ec8eeb19?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFzZWJhbGx8ZW58MHx8MHx8fDA%3D
+ teaser: https://images.unsplash.com/photo-1475440197469-e367ec8eeb19?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFzZWJhbGx8ZW58MHx8MHx8fDA%3D
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
