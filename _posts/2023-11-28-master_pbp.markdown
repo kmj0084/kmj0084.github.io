@@ -13,15 +13,21 @@ header:
 
 -------- MASTER BUILD PBP 2021-2023 SEASONS ---------
 
+```
+
 with proxy8 as (
-select cast(substring(rindex, 2, len(rindex)-2) as int) as rindex_new, *
+select cast(substring(rindex, 2, len(rindex)-2) as int) 
+as rindex_new, *
 FROM [saber].[dbo].[pbp_sql_build_8]
 ), 
 
 proxy9 as (
-select cast(substring(rindex, 2, len(rindex)-2) as int) as rindex_new, *
+select cast(substring(rindex, 2, len(rindex)-2) as int) 
+as rindex_new, *
 FROM [saber].[dbo].[pbp_sql_build_9]
 ),
+
+```
 
 cte_master_pbp as (
 	select one.rindex

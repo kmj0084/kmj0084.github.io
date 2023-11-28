@@ -39,6 +39,7 @@ library("elo")
 ```
 
 PRODUCTION WORKFLOW:
+
 ```{r Fangraphs csv files import}
 
 
@@ -210,135 +211,7 @@ mlb_pbp(game_pk = 717664)
 # bind all the dataframes together: 
 total_pbp <- bind_rows(pbp_March30
                , pbp_March31
-               , pbp_April1
-               , pbp_April2
-               , pbp_April3
-               , pbp_April4
-               , pbp_April5
-               , pbp_April6
-               , pbp_April7
-               , pbp_April8
-               , pbp_April9
-               , pbp_April10
-               , pbp_April11
-               , pbp_April12
-               , pbp_April13
-               , pbp_April14
-               , pbp_April15
-               , pbp_April16
-               , pbp_April17
-               , pbp_April18
-               , pbp_April19
-               , pbp_April20
-               , pbp_April21
-               , pbp_April22
-               , pbp_April23
-               , pbp_April24
-               , pbp_April25
-               , pbp_April26
-               , pbp_April27
-               , pbp_April28
-               , pbp_April29
-               , pbp_April30
-               , pbp_May1
-               , pbp_May2
-               , pbp_May3
-               , pbp_May4
-               , pbp_May5
-               , pbp_May6
-               , pbp_May7
-               , pbp_May8
-               , pbp_May9
-               , pbp_May10
-               , pbp_May11
-               , pbp_May12
-               , pbp_May13
-               , pbp_May14
-               , pbp_May15
-               , pbp_May16
-               , pbp_May17
-               , pbp_May18
-               , pbp_May19
-               , pbp_May20
-               , pbp_May21
-               , pbp_May22
-               , pbp_May23
-               , pbp_May24
-               , pbp_May25
-               , pbp_May26
-               , pbp_May27
-               , pbp_May28
-               , pbp_May29
-               , pbp_May30
-               , pbp_May31
-               , pbp_June1
-               , pbp_June2
-               , pbp_June3
-               , pbp_June4
-               , pbp_June5
-               , pbp_June6
-               , pbp_June7
-               , pbp_June8
-               , pbp_June9
-               , pbp_June10
-               , pbp_June11
-               , pbp_June12
-               , pbp_June13
-               , pbp_June14
-               , pbp_June15
-               , pbp_June16
-               , pbp_June17
-               , pbp_June18
-               , pbp_June19
-               , pbp_June20
-               , pbp_June21
-               , pbp_June22
-               , pbp_June23
-               , pbp_June24
-               , pbp_June25
-               , pbp_June26
-               , pbp_June27
-               , pbp_June28
-               , pbp_June29
-               , pbp_June30
-               , pbp_July1
-               , pbp_July2
-               , pbp_July3
-               , pbp_July4
-               , pbp_July5
-               , pbp_July6
-               , pbp_July7
-               , pbp_July8
-               , pbp_July9
-               , pbp_July10
-               , pbp_July11
-               , pbp_July12
-               , pbp_July13
-               , pbp_July14
-               , pbp_July15
-               , pbp_July16
-               , pbp_July17
-               , pbp_July18
-               , pbp_July19
-               , pbp_July20
-               , pbp_July21
-               , pbp_July22
-               , pbp_July23
-               , pbp_July24
-               , pbp_July25
-               , pbp_July26
-               , pbp_July27
-               , pbp_July28
-               , pbp_July29
-               , pbp_July30
-               , pbp_July31
-               , pbp_August01
-               , pbp_August02
-               , pbp_August03
-               , pbp_August04
-               , pbp_August05
-               , pbp_August06
-               , pbp_August07
+...
                )
 
 
