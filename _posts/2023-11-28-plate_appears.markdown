@@ -1,17 +1,15 @@
 ---
 layout: posts
-title:  "Plate Appearances"
+title:  "Saber Main Fact Table"
 date:   2023-11-28
-categories: [work]
-tagline: "Creating At Bats Table for Sabermetrics Database"
-tags: [sql]
-description: this is an article about an intial sql data load for a sabermetrics database
+categories: work
+tags: sql
 author_profile: true
 author: Keegan Johnson
+description: tSQL aggregations for a sabermetrics database primary fact table
 header:
- overlay_image: https://plus.unsplash.com/premium_photo-1680700148924-4abdd12c89b5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
- teaser: https://plus.unsplash.com/premium_photo-1680700148924-4abdd12c89b5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
- caption: "another line here"
+ overlay_image: https://media.istockphoto.com/id/173010399/hu/fot%C3%B3/baseball-park-eredm%C3%A9nyjelz%C5%91.jpg?s=612x612&w=0&k=20&c=W9X-qgTw00wCm389IW9F43mXMk3QP0uHZ9n6qaZM__o=
+ teaser: https://media.istockphoto.com/id/173010399/hu/fot%C3%B3/baseball-park-eredm%C3%A9nyjelz%C5%91.jpg?s=612x612&w=0&k=20&c=W9X-qgTw00wCm389IW9F43mXMk3QP0uHZ9n6qaZM__o=
 ---
 
 # Plate Appearances Sabermetrics View (tSQL)
