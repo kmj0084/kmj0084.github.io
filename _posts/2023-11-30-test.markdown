@@ -1,0 +1,15 @@
+---
+layout: posts
+title:  "Sandbox page"
+date:   2023-11-28
+categories: [work]
+author_profile: true
+author: Keegan Johnson
+---
+
+<iframe src="https://danielrivera1.shinyapps.io/Regression2/" style="border:none;width:1250px;height:800px;"></iframe>
+
+<br>
+
+<iframe src="https://shinyapps.dreamrs.fr/shinyWidgets/" style="border:none;width:1250px;height:800px;"></iframe>
+

@@ -1,6 +1,6 @@
 Keegan Johnson:
   name        : "Keegan Johnson"
-  bio         : "Let's talk about analytics! Reach out via the links below."
+#  bio         : "Reach out via the links below."
   avatar      : "/assets/images/lnhs.jpg"
   links:
     - label: "Email"

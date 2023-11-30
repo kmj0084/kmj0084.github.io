@@ -2,8 +2,10 @@
 layout: posts
 title:  "Saber Main Fact Table"
 date:   2023-11-28
-categories: article
+categories: work
 tags: sql
+author_profile: true
+author: Keegan Johnson
 description: tSQL aggregations for a sabermetrics database primary fact table
 header:
  overlay_image: https://media.istockphoto.com/id/173010399/hu/fot%C3%B3/baseball-park-eredm%C3%A9nyjelz%C5%91.jpg?s=612x612&w=0&k=20&c=W9X-qgTw00wCm389IW9F43mXMk3QP0uHZ9n6qaZM__o=
@@ -26,6 +28,8 @@ select cast(substring(rindex, 2, len(rindex)-2) as int)
 as rindex_new, *
 FROM [saber].[dbo].[pbp_sql_build_9]
 ),
+
+```
 
 ```
 
@@ -201,12 +205,10 @@ cte_master_pbp as (
 	join [saber].[dbo].[pbp_sql_build_11] eleven on one.rindex = eleven.rindex
 	)
 
-/* 
-select * into master_pbp
-from cte_master_pbp
-order by rindex asc
-*/
------
+```
+
+
+```
 
 select pbp.*, info.game_date as new_game_date
 into [saber].[dbo].[master_pbp]
@@ -214,3 +216,4 @@ from cte_master_pbp pbp
 join [saber].[dbo].[game_info_supplement] info on pbp.game_pk = info.game_pk
 order by rindex asc
 
+```

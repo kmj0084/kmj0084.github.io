@@ -2,9 +2,10 @@
 main:
   - title: "Home"
     url: "/"
-  - title: "My Work"
-    url: "mywork"
-  - title: "My Writing"
-    url: "mywriting"
-  - title: "About Me"
-    url: "/about"        
+  - title: "HR [saber]Analytics"
+    url: "saber"
+#  - title: "Data Musings"
+#    url: "data_musings"
+  - title: "My Resume"
+    url: "about"
+          

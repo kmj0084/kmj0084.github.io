@@ -2,14 +2,21 @@
 layout: posts
 title:  "Plate Appearances"
 date:   2023-11-28
-categories: work
-tags: sql
+categories: [work]
+tagline: "Creating At Bats Table for Sabermetrics Database"
+tags: [sql]
 description: this is an article about an intial sql data load for a sabermetrics database
+author_profile: true
+author: Keegan Johnson
 header:
  overlay_image: https://plus.unsplash.com/premium_photo-1680700148924-4abdd12c89b5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
  teaser: https://plus.unsplash.com/premium_photo-1680700148924-4abdd12c89b5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+ caption: "another line here"
 ---
-# Plate Appearances Sabermetrics Table with tSQL
+
+# Plate Appearances Sabermetrics View (tSQL)
+
+```
 
 use saber
 go
@@ -120,4 +127,5 @@ order by
 	, matchup_batter_fullName
 */
 
+```
 	

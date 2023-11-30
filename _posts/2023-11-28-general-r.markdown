@@ -1,17 +1,20 @@
 ---
-layout: posts
+layout: archive
 title:  "General R"
 date:   2023-11-28
 categories: work
 tags: r
+author_profile: true
+author: Keegan Johnson
 description: sabermetrics analysis with r
 header:
  overlay_image: https://media.istockphoto.com/id/185232916/hu/fot%C3%B3/baseball-statisztik%C3%A1k.webp?b=1&s=170667a&w=0&k=20&c=ynbEOj89LJPn1bgWtB5rOrNzpkqp_HEBnx0vmPxDsB0=
  teaser: https://media.istockphoto.com/id/1098072736/hu/fot%C3%B3/baseball.webp?b=1&s=170667a&w=0&k=20&c=6uZtbEVSplj-t2r9kj0aIi2MDe0EWKPlp0AZz_VKd0c=
 ---
 
-```{r Libraries}
+```
 
+{r Libraries}
 
 library(readr)
 
@@ -38,9 +41,12 @@ library("elo")
 
 ```
 
+```
+
 PRODUCTION WORKFLOW:
 
-```{r Fangraphs csv files import}
+```
+{r Fangraphs csv files import}
 
 
 fg_daily_batter_master_23 <- read_csv("C:/Users/Admin/Desktop/budaball_files/fg_daily_batter_master_23.csv", 
@@ -53,7 +59,8 @@ fg_cumul_batter_master_23 <- read_csv("C:/Users/Admin/Desktop/budaball_files/fg_
 View(fg_cumul_batter_master_23)
 ```
 
-```{r Baseball Reference team results 2023}
+```
+{r Baseball Reference team results 2023}
 
 astros_team_results <- bref_team_results("HOU", 2023)
 rangers_team_results <- bref_team_results("TEX", 2023)
@@ -91,8 +98,11 @@ all_team_results <- bind_rows(astros_team_results, rangers_team_results, angels_
 write.csv(all_team_results, file='/Users/Admin/Desktop/budaball_files/team_results.csv', row.names=FALSE)
 ```
 
+```
+
 ## DEVELOPMENT:
-```{r MLB pitch-by-pitch data}
+```
+{r MLB pitch-by-pitch data}
 
 single_day_pbp <- function(date) {
   game_pks <- mlb_game_pks (date, level_id = c ( 1 ) )
@@ -214,110 +224,9 @@ total_pbp <- bind_rows(pbp_March30
 ...
                )
 
-
-
 ```
 
-```{r Update pbp list}
 
-total_pbp_readin <- read_excel("C:/Users/Admin/Desktop/Budaball_Dash/pbp/total_pbp.xlsx")
-
-total_pbp_amend <- bind_rows(total_pbp_readin
-                             , pbp_August21
-                             , pbp_August22
-                             , pbp_August23
-                             , pbp_August24
-                             , pbp_August25
-                             , pbp_August26
-                             , pbp_August27
-                             , pbp_August28
-                             , pbp_August29
-                             , pbp_August30
-                             , pbp_August31
-                             )
-
-total_pbp <- total_pbp_amend
-
-write_xlsx(total_pbp,"/Users/Admin/Desktop/Budaball_Dash/pbp/total_pbp.xlsx")
-
-
-
-```
-
-```{r Park Factors}
-
-
-(park_factors_23 <- fg_park(2023) )
-
-
-
-```
-
-""
-
-dplyr::bind_rows(df1, df2)
-
-game_pks_1 \<- mlb_game_pks ( today ( ) -2 , level_ids = c ( 1 ) ) pbp_july29 \<- as.list(game_pks_1\$game_pk) pbp_july29 \<- lapply(pbp_july29, mlb_pbp) pbp_july29 \<- Reduce(full_join, pbp_july29) write_xlsx(pbp_july29,"/Users/Admin/Desktop/pbp/pbp_july29.xlsx")
-
-##yesterday_pbp_dataframe \<- do.call(rbind.data.frame, yesterday_pbp)
-
-```{r}
-
-
-# Fangraphs batter data - Manual load process (sample rows below, plus date key)
-Twenty22_batters <- as_tibble(fg_batter_leaders(2022, 2022, league = "all", qual = "n"))
-Twenty22_batters <- Twenty22_batters %>% 
-  mutate (date_proxy="April 8")
-Twenty22_batters$date_proxy <- as.Date(Twenty22_batters$date_proxy, 
-                                       format = "%B %d")
-Twenty22_batters$date_proxy <- Twenty22_batters$date_proxy - 365
-
-# Bref team results
-# Astros
-team_results_astros <- as_tibble(bref_team_results("HOU", 2022))
-team_results_astros$Date_reformatted <- as.Date(team_results_astros$Date,
-                                    format = "%A, %b %d")
-team_results_astros$Date_reformatted <- team_results_astros$Date_reformatted - 365
-team_results_astros$Date_fgFriendly <- as.Date(team_results_astros$Date_reformatted,
-                                              format = "%B %d, %Y")
-# Yankees
-team_results_yankees <- as_tibble(bref_team_results("NYY", 2022))
-team_results_yankees$Date_reformatted <- as.Date(team_results_yankees$Date,
-                                    format = "%A, %b %d")
-team_results_yankees$Date_fgFriendly <- as.Date(team_results_yankees$Date_reformatted,
-                                              format = "%B %d, %Y")
-team_results_yankees$Date_fgFriendly <- team_results_yankees$Date_fgFriendly - 365
-
-# Combine teams
-team_results_comb <- rbind(team_results_astros, team_results_yankees)
-
-# Left join of Fangraphs batter tib with team results
-Twenty22_batters_LJ_comb <- left_join(Twenty22_batters, team_results_comb, 
-                                     by=c("Team"="Tm",
-                                          "date_proxy"="Date_fgFriendly"))
-
-
-
-
-
-
-
-
-
-(test_schedule <- mlb_schedule(season = 2023, level_ids = "1"))
-
--------
-'These stats:' 
-Summary_function <- function(main_sample, var_1, var_2  ) { 
-  main_sample %>%
-    summarise ( rows_count = n(), 
-                week_min_var1_HR = min ({{ var_1 }}), 
-                week_max_var1 = max ({{ var_1 }}),
-                week_min_var2_AVG = min( {{ var_2 }}),
-                week_max_var2 = max( {{ var_2 }}),
-                 ) %>%
-    print() 
-}
 
 'During this timeframe:' 
 #Yesterday's games: 
@@ -329,7 +238,8 @@ Summary_player_last_week <- main_sample %>%
 
 ```
 
-```{r}
+```
+{r}
 
 main_sample <- read_sheet("https://docs.google.com/spreadsheets/d/1rrREOr_GanFLhptsjNQxwYHyEVjrvmmV3UTrETb7lPk/edit#gid=1488376356",
                           sheet = "sheet_1"
@@ -352,33 +262,10 @@ top_war_performers <- main_sample %>%
 
 ```
 
-```{r Chadwicks Player Database}
 
-chadwick <- chadwick_player_lu()
-
-chadwick_1 <- select(as.tibble(chadwick), name_last, 
-                                          name_first, 
-                                          key_fangraphs, 
-                                          key_bbref, 
-                                          key_retro, 
-                                          key_mlbam, 
-                                          key_person, 
-                                          key_uuid, 
-                                          mlb_played_first, 
-                                          mlb_played_last
-                     )
-
-chadwick_1 <- filter(chadwick_1, mlb_played_last == 2022)
-
-Reference_player_Ids_tibble <- chadwick_1
-
-# This was an attempt to merge the function call results directly with a roster. It's likely more prudent to have the Reference table.
-#mapply(playerid_lookup, BudaRosters$Last_Name, BudaRosters$First_Name)
-#BudaRoster$Player_Id <- mapply(playerid_lookup, BudaRosters$Last_Name, BudaRosters$First_Name)
 
 ```
-
-```{r}
+{r}
 
 
 fg_batter_leaders = fg_batter_leaders(x = 2022, 
@@ -442,7 +329,8 @@ astros_plot_1 + geom_label(aes(fill = factor(Name)), colour = "white", fontface 
 
 ```
 
-```{r Recent Range Game Logs}
+```
+{r Recent Range Game Logs}
 
 
 # Take qualified batters from this year: 
@@ -479,7 +367,8 @@ View(combined_offenses_combined_22 <- do.call(rbind, combined_offenses_seperate_
 
 ```
 
-```{r Data frame set up}
+```
+{r Data frame set up}
 
 df_recent_6_bat <- combined_offenses_combined_6
 df_recent_22_bat <- combined_offenses_combined_22
@@ -543,7 +432,8 @@ explore_22b_6b <- rbind(explore_22b, explore_6b)
 
 ```
 
-```{r Leaders from FanGraphs}
+```
+{r Leaders from FanGraphs}
 
 current_fg_leaders_names
 explore_22b_6b
@@ -572,37 +462,10 @@ ggplot(explore_22b_6b, aes(x=PlayerName, y=wOBA))+
 
 ```
 
-```{r Google Sheets read}
 
-# TODO: shift to read Sheet ID from URL
-BudaRanks <- read_sheet("https://docs.google.com/spreadsheets/d/1axN_xQu0PMmfr9n9_M59B9pzlpgDtPcvtwxo8dbprnQ/edit#gid=635866381", 
-                        sheet = "BudaRanks", 
-                        range = "BudaRanks!A:B")
-
-BudaRosters <- read_sheet("https://docs.google.com/spreadsheets/d/1cwWCzzGysVNCmajTcjeuV8qYlCOm37b0ROzOfkBNFgg/edit#gid=0",
-                          sheet = "Teams40Roster",
-                          range = "Teams40Roster!A:C")
-
-df_BudaRosters = as_tibble(BudaRosters)
 
 ```
-
-```{r Google Sheets data manipulation}
-
-BudaRanks <- BudaRanks %>%
-            add_row(Teams = "Diamondbacks", Ranking = 20)
-
-```
-
-```{r Google Sheets write}
-
-write_sheet(BudaRanks, 
-            ss="https://docs.google.com/spreadsheets/d/1axN_xQu0PMmfr9n9_M59B9pzlpgDtPcvtwxo8dbprnQ/edit#gid=635866381", 
-            sheet = "BudaRanks")
-
-```
-
-```{r EXTRA: Player ID lookup}
+{r EXTRA: Player ID lookup}
 
 alex_bregman = playerid_lookup(last_name = "Bregman", first_name = "Alex") 
 yordan_alvarez = playerid_lookup(last_name = "Alvarez", first_name = "Yordan")
@@ -626,7 +489,8 @@ View(yordan_alvarez_game_log)
 
 ```
 
-```{r EXTRA: Fangaphs - batting leaders}
+```
+{r EXTRA: Fangaphs - batting leaders}
 
 fg_batter_leaders = fg_batter_leaders(x = 2022, 
                                       y = 2022,
@@ -655,4 +519,3 @@ View(fg_pitcher_leaders)
 # bar + coord_polar()
 ```
 
-Maybe track deviations from beginning of season to end of season with popular outlets, on a meta basis?
