@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "Saber Main Fact Table"
+title:  "Pitch-by-Pitch Fact Table"
 date:   2023-11-28
 categories: work
 tags: sql
@@ -11,9 +11,9 @@ header:
  overlay_image: https://media.istockphoto.com/id/173010399/hu/fot%C3%B3/baseball-park-eredm%C3%A9nyjelz%C5%91.jpg?s=612x612&w=0&k=20&c=W9X-qgTw00wCm389IW9F43mXMk3QP0uHZ9n6qaZM__o=
  teaser: https://media.istockphoto.com/id/173010399/hu/fot%C3%B3/baseball-park-eredm%C3%A9nyjelz%C5%91.jpg?s=612x612&w=0&k=20&c=W9X-qgTw00wCm389IW9F43mXMk3QP0uHZ9n6qaZM__o=
 ---
-# Master pitch by pitch sabermetrics aggregation with tSQL
+# Building a sabermetrics master fact table
 
--------- MASTER BUILD PBP 2021-2023 SEASONS ---------
+There are a lot of ways to build this table. My approach is to utilize Bill Petti's rbaseball package, which scrapes data from MLB, Fangraphs, Baseball Reference, etc. This data can easily be pulled into an RDBMS (I've used MSSQL) to build further tables (or views) which is more suitable for predictive modelling.
 
 ```
 

@@ -1,6 +1,6 @@
 ---
 layout: posts
-title:  "Saber Main Fact Table"
+title:  "Fact Table 2: At Bats"
 date:   2023-11-28
 categories: work
 tags: sql
