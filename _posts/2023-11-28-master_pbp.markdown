@@ -13,7 +13,7 @@ header:
 ---
 # Building a sabermetrics master fact table
 
-There are a lot of ways to build this table. My approach is to utilize Bill Petti's rbaseball package, which scrapes data from MLB, Fangraphs, Baseball Reference, etc. This data can easily be pulled into an RDBMS (I've used MSSQL) to build further tables (or views) which is more suitable for predictive modelling.
+There are a lot of ways to build this master fact table. My approach is to utilize Bill Petti's rbaseball package, which scrapes data from MLB, Fangraphs, Baseball Reference, etc. This data can easily be pulled into an RDBMS (I've used MSSQL) to build further tables (or views) which is more suitable for predictive modelling.
 
 #### Start by loading in R packages:
 ```
