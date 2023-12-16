@@ -2,10 +2,10 @@
 main:
   - title: "Home"
     url: "/"
-  - title: "HR [saber]Analytics"
+  - title: "Analytics"
     url: "saber"
 #  - title: "Data Musings"
 #    url: "data_musings"
-  - title: "My Resume"
+  - title: "Resume"
     url: "about"
           

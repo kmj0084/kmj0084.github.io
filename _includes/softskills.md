@@ -1,4 +1,4 @@
-| Skill | Level |
+|  | Projects & Interests |
 | ---- | ---- |
 {% assign skills = site.data.skills.soft | sort: "title" -%}
 {% for skill in skills -%}

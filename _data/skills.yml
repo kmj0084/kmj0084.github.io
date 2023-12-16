@@ -1,15 +1,13 @@
 technical:
- - title: Statistical Modelling
-   level: Advanced
- - title: Enterprise Reporting
-   level: Advanced
- - title: Data Governance & Administration
-   level: Intermediate
- - title: Main Technologies
-   level: PowerBI, SQL, R
+ - title: Predictive Modeling
+   level: R -> Stata -> Python -> Orange
+ - title: Visualization & Reporting
+   level: Power BI -> RShiny -> d3.js 
+ - title: Data Engineering
+   level: tSQL -> PowerApps
 
 soft:
- - title: HR Stakeholder Management
-   level: Intermediate
- - title: Agile Framework
-   level: Intermediate+
+ - title: HR Analytics
+   level: Employee Engagement and Development, Attrition Analysis, Skills Cataloging & Forecasting
+ - title: Sabermetrics
+   level: Survival & Power Analysis in Injury Modeling, NLP & LLM Applications for Fan Experiences

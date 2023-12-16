@@ -7,8 +7,10 @@ author: Keegan Johnson
 author_profile: true
 ---
 <!-- ![keegan johnson] (/assets/images/baseballs.jpg){: .avatar} --> 
-# Hi! I'm Keegan Johnson 
-### Data Scientist & Business Intelligence Analyst
+<h1 style="font-size:30px;">Data Scientist & Business Intelligence Analyst</h1>
+I'm using this site to post some of the recent analytics projects I've worked on. Feel free to get in touch at keeganjohnson89@gmail.com
+<br>
+<br>
 Domains: Human Resources, Shared Services<br>
 Interests: People Analytics, Sabermetrics<br>
 <!--...an HR Data Scientist and baseball enthusiast. I love to analyze "people data," and am interested in exploring optimal nudges in microeconomics contexts (aka good ole incentives). I'll be posting some of my recent projects on this site, so please check back occasionally. 
@@ -31,7 +33,7 @@ Feel free to get in touch via email or LinkedIn! -->
 </ul>
 <br>
 <p style="margin-left:5%; margin-right:10%;"><u>Traveling:</u>
-	<p style="margin-left:5%; margin-right:10%;"> My partner and I have traveled to about 40 countries, and I generally split my time between the US and Western Europe. I'm currently in Budapest, Hungary, with loose plans to return to Texas toward sometime in March 2024.</p>
+	<p style="margin-left:5%; margin-right:10%;"> My partner and I have traveled to about 40 countries, and I generally split my time between the US and Western Europe. I'm currently in Budapest, Hungary, with loose plans to return to Texas in early 2024.</p>
 <br>
 <ul><u>Favorite books:</u>
 	<li>Salt, Fat, Acid, Heat, by Nosrat</li>
