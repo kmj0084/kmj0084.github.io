@@ -7,13 +7,12 @@ tags: sql
 author_profile: true
 author: Keegan Johnson
 description: tSQL aggregations for a sabermetrics database primary fact table
-header:
- overlay_image: https://media.istockphoto.com/id/173010399/hu/fot%C3%B3/baseball-park-eredm%C3%A9nyjelz%C5%91.jpg?s=612x612&w=0&k=20&c=W9X-qgTw00wCm389IW9F43mXMk3QP0uHZ9n6qaZM__o=
- teaser: https://media.istockphoto.com/id/173010399/hu/fot%C3%B3/baseball-park-eredm%C3%A9nyjelz%C5%91.jpg?s=612x612&w=0&k=20&c=W9X-qgTw00wCm389IW9F43mXMk3QP0uHZ9n6qaZM__o=
 ---
-# Building a sabermetrics master fact table
+# Building a sabermetrics pitch-by-pitch fact table
 
-There are a lot of ways to build this master fact table. My approach is to utilize Bill Petti's rbaseball package, which scrapes data from MLB, Fangraphs, Baseball Reference, etc. This data can easily be pulled into an RDBMS (I've used MSSQL) to build further tables (or views) which is more suitable for predictive modelling.
+My goal with this short project is to build a pbp table using R and SQL for the 2021-2023 MLB regular seasons. This table can be subsequently used for all kinds of further analysis, and one could just as easily import a subset of total data to suite a specific need.
+
+I used Bill Petti's *rbaseball* package, which scrapes data from MLB, Fangraphs, Baseball Reference, and other sources. This data can then easily be pulled into an RDBMS (I've used MSSQL) to denormalize for additional tables, or a reporting tool like Power BI directly for visualization and analysis.
 
 #### Start by loading in R packages:
 ```
